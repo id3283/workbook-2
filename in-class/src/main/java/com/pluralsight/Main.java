@@ -8,9 +8,25 @@ import java.util.regex.Pattern;
 class Main {
 
     public static void main(String[] args) {
-        formattingDates();
+        exercise212();
     }
+    static void exercise212() {
+        String name1 = " David P. Dykes  ";
+//        name1 = "Dave Dykes";
 
+        name1 = name1.trim();
+        String[] parts = name1.split(" ");
+
+        System.out.println("First name: " + parts[0]);
+
+        if(parts.length == 2) {
+            System.out.println("Last name: " + parts[1]);
+        }
+        else {
+            System.out.println("Middle name (initial): " + parts[1]);
+            System.out.println("Last name: " + parts[2]);
+        }
+    }
     static void formattingDates() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
 
@@ -22,16 +38,19 @@ class Main {
 
         System.out.println("Here's the date variable: " + date);
         System.out.println("Here's it's type: " + date.getClass());
-
-
     }
 
     static void usingSplit() {
-        String name = "Alex Leal|Victoria Babalola";
+        String name = "Alex Leal|David Disu";
 
-        String[] nameParts = name.split(Pattern.quote("|"));
+        String delimiter = "\\|";
+        String p = Pattern.quote("|");
 
-        System.out.println("First name: " + nameParts[0]);
-        System.out.println("Last name: " + nameParts[1]);
+        String[] nameParts = name.split(delimiter);
+
+        System.out.println("First element: " + nameParts[0]);
+        System.out.println("Second element: " + nameParts[1]);
     }
+
+
 }
