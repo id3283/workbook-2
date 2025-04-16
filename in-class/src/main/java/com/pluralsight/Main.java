@@ -8,17 +8,27 @@ import java.util.regex.Pattern;
 class Main {
 
     public static void main(String[] args) {
-        exercise212();
+        stringBuilder();
     }
-    static void exercise212() {
-        String name1 = " David P. Dykes  ";
-//        name1 = "Dave Dykes";
 
+    static void stringBuilder() {
+
+        StringBuilder name = new StringBuilder();
+        name.append("Dave");
+        name.append("\n");
+
+        name.append("Izel").append("\n");
+
+        String nameString = name.toString();
+    }
+
+    static void exercise212() {
+        String name1 = " Dave Dykes  ";
         name1 = name1.trim();
+
         String[] parts = name1.split(" ");
 
         System.out.println("First name: " + parts[0]);
-
         if(parts.length == 2) {
             System.out.println("Last name: " + parts[1]);
         }
