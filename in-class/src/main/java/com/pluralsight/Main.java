@@ -2,7 +2,6 @@ package com.pluralsight;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.Scanner;
 import java.util.regex.Pattern;
 
 class Main {
