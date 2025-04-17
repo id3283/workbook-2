@@ -5,22 +5,18 @@ import java.util.Scanner;
 public class CellPhoneApplication {
 
     public static void main(String[] args) {
-
         CellPhone phone = new CellPhone();
+        phone.setModel("myPhone");
+        phone.serialNumber = 3;
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter serial number: ");
-        String input = scanner.nextLine();
-        int serialNumber = Integer.parseInt(input);
+        CellPhone anotherPhone = new CellPhone("Android", 55);
 
-        phone.setSerialNumber(serialNumber);
+        CellPhone yetAnotherPhone;
+        yetAnotherPhone = new CellPhone();
 
-        System.out.print("Enter model: ");
-        input = scanner.nextLine();
+        yetAnotherPhone.setModel("yet another model") ;
 
-        phone.setModel(input);
+        yetAnotherPhone.displayInfo();
 
-        System.out.println("Serial Number: " + phone.getSerialNumber());
-        System.out.println("Model: " + phone.getModel());
     }
 }

@@ -1,29 +1,37 @@
 package com.pluralsight;
 
 public class CellPhone {
-    private int serialNumber;
+    public int serialNumber;
+    private String model;
 
-    public String getModel() {
-        return model;
+    public CellPhone() {
     }
-
-    public void setModel(String model) {
+    public CellPhone(String model, int serialNumber) {
         this.model = model;
+        this.serialNumber = serialNumber;
     }
 
+    public void displayInfo() {
+        System.out.println("Model: " + this.model);
+    }
+
+
+    //region  darn getters and freakin' setters
     public int getSerialNumber() {
-        return serialNumber;
+        return this.serialNumber;
     }
 
     public void setSerialNumber(int serialNumber) {
         this.serialNumber = serialNumber;
     }
 
-    private String model;
-
-    public CellPhone() {
-        this.serialNumber = 0;
-        this.model = "";
+    public String getModel() {
+        return this.model;
     }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+    //endregion
 
 }

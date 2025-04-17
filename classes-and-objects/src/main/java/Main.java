@@ -1,9 +1,10 @@
 public class Main {
     public static void main(String[] args) {
-        Person p1 = new Person();
-        p1.name = "fred";
-        p1.setAge(45);
+        Person p1 = new Person("Michael", 23);
+        System.out.println("Mike's energy: " + p1.getEnergy());
 
-        System.out.println("p1 name: " + p1.name);
+        p1.work(14);
+        System.out.println("Mike's energy: " + p1.getEnergy());
+
     }
 }
