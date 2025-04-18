@@ -1,10 +1,10 @@
 package com.pluralsight;
 
-import java.util.Scanner;
 
 public class CellPhoneApplication {
 
     public static void main(String[] args) {
+
         CellPhone phone = new CellPhone();
         phone.setModel("myPhone");
         phone.serialNumber = 3;
@@ -18,5 +18,9 @@ public class CellPhoneApplication {
 
         yetAnotherPhone.displayInfo();
 
+        display(yetAnotherPhone);
+
+    }
+    public static void display(CellPhone phone) {
     }
 }

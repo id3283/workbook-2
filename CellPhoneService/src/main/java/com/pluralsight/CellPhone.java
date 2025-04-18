@@ -6,6 +6,7 @@ public class CellPhone {
 
     public CellPhone() {
     }
+
     public CellPhone(String model, int serialNumber) {
         this.model = model;
         this.serialNumber = serialNumber;
@@ -13,6 +14,10 @@ public class CellPhone {
 
     public void displayInfo() {
         System.out.println("Model: " + this.model);
+    }
+
+    public void displayInfo(CellPhone x) {
+        System.out.println("Model: " + x.model);
     }
 
 
