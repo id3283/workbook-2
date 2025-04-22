@@ -1,5 +1,8 @@
 package com.pluralsight;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
@@ -8,11 +11,40 @@ import java.util.regex.Pattern;
 
 class Main {
     public static void main(String[] args) {
-        intentionalErrorsNoReallyIntentional();
+        fileIo();
+
+    }
+
+    static void fileIo() {
+        try {
+            // create a FileInputStream object pointing to
+            // a specific file
+            FileInputStream fis = new FileInputStream("/Users/dave/pluralsight/workbook-2/in-class/src/main/java/com/pluralsight/poem.txt");
+            // create a Scanner to reference the file to be read
+            Scanner scanner = new Scanner(fis);
+            String input;
+            // read until there is no more data
+            while (scanner.hasNextLine()) {
+                input = scanner.nextLine();
+                System.out.println(input);
+            }
+            // close the scanner and release the resources
+            scanner.close();
+
+        } catch (IOException e) {
+            // display stack trace if there was an error
+            e.printStackTrace();
+        }
+
+
+    }
+
+    static void printNoFile() {
+        System.out.println("yo, that file doesn't exist.");
     }
 
     static void intentionalErrorsNoReallyIntentional() {
-        String[] names =  {"Kevin", "Mahlet"};
+        String[] names = {"Kevin", "Mahlet"};
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter an integer (nothing else... it's important!)");
 
