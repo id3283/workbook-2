@@ -26,12 +26,6 @@ class Main {
 
         System.out.println("Here is the integer: " + i);
 
-
-//        } catch (Exception e) {
-//            System.out.println("Here's the exception: " + e);
-//            System.out.println("Meh, whatever... I'm just going to carry on.");
-//        }
-
     }
 
     static void parseProblem() {
