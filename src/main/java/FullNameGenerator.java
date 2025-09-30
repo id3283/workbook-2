@@ -21,7 +21,7 @@ public class FullNameGenerator {
 
     static String maybeAddMiddleName(String fullName) {
         String middleName = getStringFromUser("Please enter your middle name: ");
-        if ( middleName.isBlank() ) {
+        if (!middleName.isBlank() ) {
             fullName = fullName + " " + middleName.trim();
         }
         return fullName;
